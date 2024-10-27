@@ -9,7 +9,7 @@ Una aplicación de lista de tareas interactiva donde los usuarios pueden añadir
 - Guardado local en el navegador para preservar las tareas entre sesiones.
 
 ## Captura de pantalla
-![Captura del proyecto](./captura.png)
+![Captura del proyecto](./todoList.png)
 
 ## Prueba la aplicación
 Puedes interactuar con la aplicación en línea a través de este enlace de GitHub Pages: [To-Do List](https://minyanaa.github.io/To-Do-List/)
