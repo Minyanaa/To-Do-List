@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131416;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: white;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    height: 500px;
+}
+
+.agregar {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0px;
+    background-color: #202225;
+    padding: 0px 0px 0px 10px;
+    height: 40px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 5px 5px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #eac772;
+}
+
+ul {
+    padding-left: 0px;
+    margin-top: 15px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    background-color: #202225;
+    border-radius: 10px;
+    padding: 14px 30px 14px 40px; /* Espacio a la izquierda para el botón */
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 25%; /* Botón redondeado */
+    box-sizing: border-box;
+}
+
+ul li.checked {
+    color: #555;
+    transition: color 0.3s, background-color 0.3s;
+    background-color: #333;
+    color: #888;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-color: #eac772; /* Fondo color amarillo al estar checked */
+    border: 2px solid #eac772;
+    border-radius: 25%;
+    content: '✓'; /* Añadir símbolo de check */
+    color: #131416;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #999;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+
+.opciones {
+    display: flex;
+    align-items: center;
+    padding-left: 17px;
+    margin-bottom: 50px;
+    width: 100%; /* Cambiado a 100% para ocupar toda la línea */
+    position: relative;
+}
+
+
+
+
+.opciones button {
+    margin-left: auto; /* Empuja el botón a la derecha */
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #eac772;
+}
+
+.opciones label {
+    margin-right: 20px; /* Espacio entre "Fecha" y el input */
+    color: #eac772;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.opciones input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+}
+
